@@ -1,0 +1,232 @@
+@use '../../responsive.scss' as *;
+
+.singlePage {
+    display: flex;
+    height: 100%;
+
+    @include md {
+        flex-direction: column;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        padding-bottom: 30px;
+    }
+
+    .details {
+        flex: 3;
+        height: 100%;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        padding-bottom: 30px;
+
+        @include md {
+            flex: none;
+            height: max-content;
+            margin-bottom: 25px;
+        }
+
+        .wrapper {
+            padding-right: 50px;
+
+            .info {
+                margin-top: 50px;
+
+                .top {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .post {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        h1 {
+                            font-weight: 400;
+                        }
+
+                        .address {
+                            display: flex;
+                            gap: 5px;
+                            align-items: center;
+                            color: rgb(103, 101, 101);
+                            font-size: 14px;
+
+                            img {
+                                width: 16px;
+                                height: 16px;
+                            }
+                        }
+
+                        .price {
+                            padding: 5px;
+                            background-color: rgba(250, 250, 112, 0.575);
+                            border-radius: 5px;
+                            width: max-content;
+                            font-size: 18px;
+                            font-weight: 400;
+                        }
+                    }
+
+                    .user {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 20px;
+                        padding: 0px 50px;
+                        border-radius: 10px;
+                        background-color: rgb(240, 240, 165);
+                        font-weight: 600;
+
+                         @include sm{
+                            font-size: 12px;
+                            padding: 0px 25px;
+                            }
+
+                        img {
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                .bottom {
+                    margin-top: 50px;
+                    color: #555;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+
+    .features {
+        flex: 1.6;
+        background-color: #fce7e1;
+        height: 100%;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        border-radius: 15px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        padding-bottom: 20px;
+
+        @include md {
+            flex: none;
+            height: max-content;
+            margin-bottom: 50px;
+        }
+
+        .wrapper {
+            padding: 0px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            img {
+                width: 22px;
+                height: 22px;
+            }
+
+            .title {
+                font-weight: bold;
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            .feature {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                img {
+                    background-color: rgba(254, 205, 81, 0.199);
+                }
+
+                .featureText {
+                    span {
+                        font-weight: bold;
+                    }
+
+                    p {
+                        font-size: 10px;
+                    }
+                }
+            }
+
+            .listVertical {
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+                padding: 20px 10px;
+                background-color: azure;
+                border-radius: 10px;
+            }
+
+            .listHorizontal {
+                display: flex;
+                justify-content: space-between;
+                padding: 15px 10px;
+                background-color: azure;
+                border-radius: 10px;
+                gap: 5px;
+
+                @include sm{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                }
+            }
+
+            .sizes {
+                display: flex;
+                justify-content: space-between;
+
+                @include lg {
+                    font-size: 10px;
+                }
+
+                .size {
+                    display: flex;
+                    align-items: center;
+                    gap: 1px;
+                    background-color: azure;
+                    padding: 10px;
+                    border-radius: 10px;
+                }
+            }
+
+            .mapContainer {
+                width: 100%;
+                height: 200px;
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: space-between;
+
+                @include sm{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    padding: 15px;
+                    gap: 5px;
+                    background-color: azure;
+                    border: 1px solid black;
+                    border-radius: 10px;
+                    cursor: pointer;
+
+                    img {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

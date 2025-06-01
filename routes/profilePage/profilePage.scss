@@ -1,0 +1,94 @@
+@use '../../responsive.scss' as *;
+
+.profilePage {
+    display: flex;
+    height: 100%;
+
+    @include md {
+        flex-direction: column;
+        overflow-y: scroll;
+        scrollbar-width: none;
+    }
+
+    .details {
+        flex: 3;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        padding-bottom: 30px;
+
+        @include md {
+            flex: none;
+            height: max-content;
+        }
+
+        .wrapper {
+            padding-right: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            .title {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                h1 {
+                    font-weight: 400;
+                }
+
+                button {
+                    padding: 12px 24px;
+                    background-color: yellow;
+                    cursor: pointer;
+                    border: none;
+                    border-radius: 10px;
+                }
+            }
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                }
+
+                button {
+                    width: 100px;
+                    background-color: rgba(9, 173, 72, 0.957);
+                    border: none;
+                    padding: 10px 15px;
+                    border-radius: 5px;
+                    color: white;
+                    cursor: pointer;
+                }
+
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    .chatContainer {
+        flex: 1.6;
+        background-color: antiquewhite;
+        height: 100%;
+
+        @include md {
+            flex: none;
+            height: max-content;
+        }
+
+        .wrapper {
+            padding: 0px 20px;
+            height: 100%;
+        }
+    }
+}
